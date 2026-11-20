@@ -1,0 +1,10 @@
+{
+  "episodes": 2,
+  "frames": 1283,
+  "tasks": 2,
+  "parquet_values_identical": true,
+  "encoded_video_sha256_identical": true,
+  "metadata_identical": true,
+  "stats_max_absolute_error": 0.0,
+  "lerobot_decoding_passed": true
+}

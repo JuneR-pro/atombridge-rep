@@ -1,0 +1,44 @@
+{
+  "mode": "lora",
+  "batch_size_global": 32,
+  "devices": [
+    "cuda:0",
+    "cuda:1",
+    "cuda:2",
+    "cuda:3"
+  ],
+  "backend": "gpu",
+  "fsdp_devices": 4,
+  "ema_decay": null,
+  "parameter_elements": 3403421456,
+  "trainable_elements": 466957072,
+  "state_groups": {
+    "params": {
+      "global_bytes": 7740757056,
+      "per_device_bytes": 1948206144
+    },
+    "opt_state": {
+      "global_bytes": 3735656584,
+      "per_device_bytes": 959379592
+    },
+    "ema_params": {
+      "global_bytes": 0,
+      "per_device_bytes": 0
+    }
+  },
+  "per_device_persistent_bytes": 2907585740,
+  "compiled_memory": {
+    "argument_size_in_bytes": 2922095660,
+    "output_size_in_bytes": 2907587184,
+    "alias_size_in_bytes": 2907585740,
+    "temp_size_in_bytes": 3756478344,
+    "generated_code_size_in_bytes": 3979204,
+    "host_argument_size_in_bytes": 0,
+    "host_output_size_in_bytes": 0,
+    "host_temp_size_in_bytes": 0,
+    "host_alias_size_in_bytes": 0
+  },
+  "compiled_peak_buffer_estimate_bytes": 6678575448,
+  "compile_seconds": 42.36438488960266,
+  "executed_training_steps": 0
+}

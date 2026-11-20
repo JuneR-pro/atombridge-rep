@@ -121,12 +121,19 @@ def init_train_state(
 
     partial_params = _load_weights_and_validate(config.weight_loader, train_state_shape.params.to_pure_dict())
     replicated_sharding = jax.sharding.NamedSharding(mesh, jax.sharding.PartitionSpec())
+    # Only loaded leaves are passed to init (e.g. LoRA leaves may be absent).
+    # Place them directly on their final shards instead of replicating the
+    # entire checkpoint on every device alongside the initialized train state.
+    flat_param_sharding = traverse_util.flatten_dict(state_sharding.params.to_pure_dict())
+    partial_params_sharding = traverse_util.unflatten_dict(
+        {key: flat_param_sharding[key] for key in traverse_util.flatten_dict(partial_params)}
+    )
 
     # Initialize the train state and mix in the partial params.
     train_state = jax.jit(
         init,
         donate_argnums=(1,),  # donate the partial params buffer.
-        in_shardings=replicated_sharding,
+        in_shardings=(replicated_sharding, partial_params_sharding),
         out_shardings=state_sharding,
     )(init_rng, partial_params)
 

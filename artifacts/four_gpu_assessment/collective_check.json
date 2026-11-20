@@ -1,0 +1,14 @@
+{
+  "devices": [
+    "cuda:0",
+    "cuda:1",
+    "cuda:2",
+    "cuda:3"
+  ],
+  "input_bytes_per_device": 8388608,
+  "output_bytes_per_device": 33554432,
+  "median_seconds": 0.00423632946331054,
+  "all_gather_result_correct": true,
+  "training_steps": 0,
+  "note": "small-buffer communication check on a shared host; not a training-speed benchmark"
+}

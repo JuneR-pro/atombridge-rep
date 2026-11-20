@@ -1,0 +1,22 @@
+{
+  "expert_task": "open_thermal_cycler_lid",
+  "expert_success": true,
+  "render_backend": "osmesa",
+  "render_fps": 5,
+  "rendered_cameras": 3,
+  "lerobot_episodes": 1,
+  "lerobot_frames": 80,
+  "action_chunk_shape": [
+    50,
+    7
+  ],
+  "adapted_state_shape": [
+    32
+  ],
+  "adapted_actions_shape": [
+    50,
+    32
+  ],
+  "model_downloads": false,
+  "training_started": false
+}

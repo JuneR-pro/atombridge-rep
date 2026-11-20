@@ -1,0 +1,11 @@
+# Project-local additions for EmbodiedAgentLab/.venv (Python 3.11).
+# Install with --no-deps; reuse the base environment for JAX, PyTorch and LeRobot.
+mujoco==3.3.0
+toppra==0.6.11
+zstandard==0.25.0
+trimesh==5.2.1
+shapely==2.2.0
+triangle==20250106
+manifold3d==3.5.5
+usd-core==26.11
+transformers==4.53.2

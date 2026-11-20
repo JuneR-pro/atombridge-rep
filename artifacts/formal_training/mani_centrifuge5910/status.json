@@ -1,0 +1,12 @@
+{
+  "stage": "complete",
+  "total_frames": 564505,
+  "batches": 17640,
+  "batch_size": 32,
+  "frames_used": 564480,
+  "dropped_tail_frames": 25,
+  "state_vectors": 564480,
+  "action_vectors": 28224000,
+  "output": "/data1/yanfeng/datasets/atombridge/assets/mani_centrifuge5910",
+  "elapsed_seconds": 100.42291569709778
+}

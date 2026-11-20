@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "formal_training_started": false,
+  "new_downloads": false,
+  "protocol": "resolved_protocol.json",
+  "datasets": {
+    "mani_thermalcycler": {
+      "stage": "complete",
+      "total_frames": 349419,
+      "batches": 10919,
+      "batch_size": 32,
+      "frames_used": 349408,
+      "dropped_tail_frames": 11,
+      "state_vectors": 349408,
+      "action_vectors": 17470400,
+      "output": "/data1/yanfeng/datasets/atombridge/assets/mani_thermalcycler",
+      "elapsed_seconds": 62.09817051887512
+    },
+    "mani_centrifuge5910": {
+      "stage": "complete",
+      "total_frames": 564505,
+      "batches": 17640,
+      "batch_size": 32,
+      "frames_used": 564480,
+      "dropped_tail_frames": 25,
+      "state_vectors": 564480,
+      "action_vectors": 28224000,
+      "output": "/data1/yanfeng/datasets/atombridge/assets/mani_centrifuge5910",
+      "elapsed_seconds": 100.42291569709778
+    }
+  },
+  "helper_sha256": "17fad8c5caac84bbc5d91676d5a5e8cba4fd9ace2f559afba9c5ab6a6aaea19c",
+  "initialization": "/home/yanfeng/code/EmA/openpi/checkpoints/pi05_base/params",
+  "fsdp_devices": 4,
+  "user_instruction": "Do not start training; only fix and validate.",
+  "checkpoint_file_io_concurrency_limit": 2,
+  "short_gpu_validation_successful_runs": 2,
+  "short_gpu_validation_steps_per_run": 3,
+  "full_checkpoint_cpu_save_restore_passed": true,
+  "full_checkpoint_gpu_after_io_limit_verified": false,
+  "training_running": false
+}

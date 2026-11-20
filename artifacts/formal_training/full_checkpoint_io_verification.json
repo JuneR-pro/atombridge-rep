@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "backend": "cpu",
+  "devices": 4,
+  "checkpoint": "/data1/yanfeng/checkpoints/atombridge/local_mani_thermalcycler_pi05/pi05_base_fsdp4_cpu_io_20261119/1",
+  "executed_training_steps": 0,
+  "full_state_save_restore_passed": true,
+  "step_restored": 0,
+  "representative_parameter_exactly_equal": true,
+  "all_state_shapes_and_dtypes_match": true,
+  "ema_restored": true,
+  "file_io_concurrency_limit": 2,
+  "seconds": 149.84567499160767
+}

@@ -1,0 +1,30 @@
+{
+  "mode": "lora",
+  "batch_size_global": 32,
+  "devices": [
+    "TFRT_CPU_0",
+    "TFRT_CPU_1",
+    "TFRT_CPU_2",
+    "TFRT_CPU_3"
+  ],
+  "backend": "cpu",
+  "fsdp_devices": 4,
+  "ema_decay": null,
+  "parameter_elements": 3403421456,
+  "trainable_elements": 466957072,
+  "state_groups": {
+    "params": {
+      "global_bytes": 7740757056,
+      "per_device_bytes": 1948206144
+    },
+    "opt_state": {
+      "global_bytes": 3735656584,
+      "per_device_bytes": 959379592
+    },
+    "ema_params": {
+      "global_bytes": 0,
+      "per_device_bytes": 0
+    }
+  },
+  "per_device_persistent_bytes": 2907585740
+}

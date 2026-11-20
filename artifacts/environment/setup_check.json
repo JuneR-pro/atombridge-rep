@@ -1,0 +1,86 @@
+{
+  "mujoco": {
+    "ok": true,
+    "detail": "3.3.0 (/home/yanfeng/code/EmA/AtomBridge/.deps/mujoco/__init__.py)"
+  },
+  "toppra": {
+    "ok": true,
+    "detail": "0.6.11 (/home/yanfeng/code/EmA/AtomBridge/.deps/toppra/__init__.py)"
+  },
+  "zstandard": {
+    "ok": true,
+    "detail": "0.25.0 (/home/yanfeng/code/EmA/AtomBridge/.deps/zstandard/__init__.py)"
+  },
+  "trimesh": {
+    "ok": true,
+    "detail": "5.2.1 (/home/yanfeng/code/EmA/AtomBridge/.deps/trimesh/__init__.py)"
+  },
+  "shapely": {
+    "ok": true,
+    "detail": "2.2.0 (/home/yanfeng/code/EmA/AtomBridge/.deps/shapely/__init__.py)"
+  },
+  "triangle": {
+    "ok": true,
+    "detail": "20250106 (/home/yanfeng/code/EmA/AtomBridge/.deps/triangle/__init__.py)"
+  },
+  "manifold3d": {
+    "ok": true,
+    "detail": "3.5.5 (/home/yanfeng/code/EmA/AtomBridge/.deps/manifold3d.cpython-311-x86_64-linux-gnu.so)"
+  },
+  "usd-core": {
+    "ok": true,
+    "detail": "26.11 (/home/yanfeng/code/EmA/AtomBridge/.deps/pxr/Usd/__init__.py)"
+  },
+  "torch": {
+    "ok": true,
+    "detail": "2.7.1 (/home/yanfeng/code/EmA/EmbodiedAgentLab/.venv/lib/python3.11/site-packages/torch/__init__.py)"
+  },
+  "torchvision": {
+    "ok": true,
+    "detail": "0.22.1 (/home/yanfeng/code/EmA/EmbodiedAgentLab/.venv/lib/python3.11/site-packages/torchvision/__init__.py)"
+  },
+  "jax": {
+    "ok": true,
+    "detail": "0.5.3 (/home/yanfeng/code/EmA/EmbodiedAgentLab/.venv/lib/python3.11/site-packages/jax/__init__.py)"
+  },
+  "flax": {
+    "ok": true,
+    "detail": "0.10.2 (/home/yanfeng/code/EmA/EmbodiedAgentLab/.venv/lib/python3.11/site-packages/flax/__init__.py)"
+  },
+  "lerobot": {
+    "ok": true,
+    "detail": "0.3.3 (/home/yanfeng/code/EmA/EmbodiedAgentLab/.venv/lib/python3.11/site-packages/lerobot/datasets/lerobot_dataset.py)"
+  },
+  "transformers": {
+    "ok": true,
+    "detail": "4.53.2 (/home/yanfeng/code/EmA/AtomBridge/.deps/transformers/__init__.py)"
+  },
+  "openai": {
+    "ok": true,
+    "detail": "3.26.1 (/home/yanfeng/code/EmA/EmbodiedAgentLab/.venv/lib/python3.11/site-packages/openai/__init__.py)"
+  },
+  "CLIP classes": {
+    "ok": true,
+    "detail": "CLIPModel, CLIPProcessor"
+  },
+  "OpenPI config": {
+    "ok": true,
+    "detail": "mani_thermalcycler_pi05, steps=50000, batch=32"
+  },
+  "expert modules and native plugin": {
+    "ok": true,
+    "detail": "7 thermal + 7 centrifuge tasks"
+  },
+  "scene thermal_cycler_tasks": {
+    "ok": true,
+    "detail": "nq=25, nu=7, cameras=3"
+  },
+  "scene centrifuge_5910_tasks": {
+    "ok": true,
+    "detail": "nq=31, nu=8, cameras=3"
+  },
+  "TOPPRA trajectory": {
+    "ok": true,
+    "detail": "duration=2.000s, samples=(10, 2)"
+  }
+}

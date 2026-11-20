@@ -1,0 +1,247 @@
+{
+  "status": "complete",
+  "date": "2026-11-18",
+  "git_commit": "716e8e3928771e321b4a4ec16883c31817ca5d40",
+  "fps": 50,
+  "resolution": [
+    224,
+    224
+  ],
+  "new_downloads": false,
+  "formal_training_started": false,
+  "conversion": {
+    "workers_per_scene": 4,
+    "shards_per_scene": 7,
+    "episodes_per_shard": 100,
+    "script": "scripts/parallel_convert.py",
+    "original_converter": "scripts/convert.py",
+    "small_sample_equivalence": "parallel_validation.json"
+  },
+  "storage_links": {
+    "data": "/data1/yanfeng/datasets/atombridge",
+    "checkpoints": "/data1/yanfeng/checkpoints/atombridge",
+    "third_party/openpi/checkpoints": "/data1/yanfeng/checkpoints/atombridge",
+    "logs/thermal_cycler_tasks": "/data1/yanfeng/datasets/atombridge/raw/thermal_cycler_tasks",
+    "logs/centrifuge5910_tasks": "/data1/yanfeng/datasets/atombridge/raw/centrifuge5910_tasks"
+  },
+  "results": {
+    "thermal": {
+      "repo_id": "mani_thermalcycler",
+      "dataset": "/data1/yanfeng/datasets/atombridge/lerobot/mani_thermalcycler",
+      "raw": "/data1/yanfeng/datasets/atombridge/raw/thermal_cycler_tasks",
+      "bytes": 867688913,
+      "audit": {
+        "episodes": 700,
+        "frames": 349419,
+        "fps": 50,
+        "resolution": [
+          224,
+          224
+        ],
+        "state_dimension": 7,
+        "action_dimension": 7,
+        "positive_frames": 36769,
+        "task_episode_counts": {
+          "close the lid of the thermal cycler": 100,
+          "open the lid of the thermal cycler": 100,
+          "place pcrPlate into the thermal cycler": 100,
+          "press the button of the thermal cycler": 100,
+          "screw loosen the knob of the thermal cycler": 100,
+          "screw tighten the knob of the thermal cycler": 100,
+          "take pcrPlate from the thermal cycler": 100
+        },
+        "all_finite": true,
+        "labels_match_raw": true,
+        "state_actions_match_raw": true,
+        "frame_indices_contiguous": true,
+        "video_frame_counts_match": true,
+        "task_indices_match_raw": true
+      },
+      "native_training_input": {
+        "repo_id": "mani_thermalcycler",
+        "frames": 349419,
+        "samples": [
+          {
+            "index": 0,
+            "state_shape": [
+              7
+            ],
+            "actions_shape": [
+              50,
+              7
+            ],
+            "images": {
+              "image": [
+                3,
+                224,
+                224
+              ],
+              "wrist_image": [
+                3,
+                224,
+                224
+              ]
+            }
+          },
+          {
+            "index": 174709,
+            "state_shape": [
+              7
+            ],
+            "actions_shape": [
+              50,
+              7
+            ],
+            "images": {
+              "image": [
+                3,
+                224,
+                224
+              ],
+              "wrist_image": [
+                3,
+                224,
+                224
+              ]
+            }
+          },
+          {
+            "index": 349418,
+            "state_shape": [
+              7
+            ],
+            "actions_shape": [
+              50,
+              7
+            ],
+            "images": {
+              "image": [
+                3,
+                224,
+                224
+              ],
+              "wrist_image": [
+                3,
+                224,
+                224
+              ]
+            }
+          }
+        ],
+        "passed": true
+      }
+    },
+    "centrifuge": {
+      "repo_id": "mani_centrifuge5910",
+      "dataset": "/data1/yanfeng/datasets/atombridge/lerobot/mani_centrifuge5910",
+      "raw": "/data1/yanfeng/datasets/atombridge/raw/centrifuge5910_tasks",
+      "bytes": 1916192464,
+      "audit": {
+        "episodes": 700,
+        "frames": 564505,
+        "fps": 50,
+        "resolution": [
+          224,
+          224
+        ],
+        "state_dimension": 7,
+        "action_dimension": 7,
+        "positive_frames": 46758,
+        "task_episode_counts": {
+          "close the lid of the centrifuge5910": 100,
+          "open the lid of the centrifuge5910": 100,
+          "pick the balance centrifuge tube from rack and place it into the centrifuge5910": 100,
+          "pick the experimental centrifuge tube from rack and place it into the centrifuge5910": 100,
+          "press the screen button of the centrifuge5910": 100,
+          "pick the balance centrifuge tube from the centrifuge5910 and place it on the rack": 100,
+          "pick the experimental centrifuge tube from the centrifuge5910 and place it on the rack": 100
+        },
+        "all_finite": true,
+        "labels_match_raw": true,
+        "state_actions_match_raw": true,
+        "frame_indices_contiguous": true,
+        "video_frame_counts_match": true,
+        "task_indices_match_raw": true
+      },
+      "native_training_input": {
+        "repo_id": "mani_centrifuge5910",
+        "frames": 564505,
+        "samples": [
+          {
+            "index": 0,
+            "state_shape": [
+              7
+            ],
+            "actions_shape": [
+              50,
+              7
+            ],
+            "images": {
+              "image": [
+                3,
+                224,
+                224
+              ],
+              "wrist_image": [
+                3,
+                224,
+                224
+              ]
+            }
+          },
+          {
+            "index": 282252,
+            "state_shape": [
+              7
+            ],
+            "actions_shape": [
+              50,
+              7
+            ],
+            "images": {
+              "image": [
+                3,
+                224,
+                224
+              ],
+              "wrist_image": [
+                3,
+                224,
+                224
+              ]
+            }
+          },
+          {
+            "index": 564504,
+            "state_shape": [
+              7
+            ],
+            "actions_shape": [
+              50,
+              7
+            ],
+            "images": {
+              "image": [
+                3,
+                224,
+                224
+              ],
+              "wrist_image": [
+                3,
+                224,
+                224
+              ]
+            }
+          }
+        ],
+        "passed": true
+      }
+    }
+  },
+  "source_sha256": {
+    "scripts/prepare_formal_dataset.py": "0cf881ca9b1ebf020fcff95e761c0d5342d4bceab17b187f3d863523c395617a",
+    "scripts/parallel_convert.py": "4a334c8c667901fb97e44f615f08d967cc7c74dfd1a72eb479b5baf9481bc46b",
+    "scripts/convert.py": "528dfa66f54850f15b60501e906c6b315c503d364647cc7a263c0bd7b22e04ce",
+    "scripts/autobio_scripts/render.py": "2707940b1df3cb7855a01d2baa878d7a8aac3ee539a3676d709c6f23a2ecca94"
+  }
+}

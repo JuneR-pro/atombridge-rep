@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "path": "/home/yanfeng/code/EmA/openpi/checkpoints/pi05_base",
+  "source": "gs://openpi-assets/checkpoints/pi05_base",
+  "files": 29,
+  "download_bytes": 12441749581,
+  "crc32c_all_passed": true,
+  "model_parameter_shapes_and_dtypes_match": true,
+  "all_parameters_finite": true,
+  "parameter_arrays": 51,
+  "parameter_elements": 3353433872,
+  "in_memory_bytes": 13413735488,
+  "dtypes": {
+    "float32": 51
+  },
+  "restore_and_check_seconds": 8.654999494552612,
+  "training_steps": 0
+}

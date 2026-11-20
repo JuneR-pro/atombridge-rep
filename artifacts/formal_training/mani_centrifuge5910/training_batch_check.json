@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "batch_size": 32,
+  "state_shape": [
+    32,
+    32
+  ],
+  "action_shape": [
+    32,
+    50,
+    32
+  ],
+  "token_shape": [
+    32,
+    200
+  ],
+  "images": {
+    "base_0_rgb": [
+      32,
+      224,
+      224,
+      3
+    ],
+    "left_wrist_0_rgb": [
+      32,
+      224,
+      224,
+      3
+    ],
+    "right_wrist_0_rgb": [
+      32,
+      224,
+      224,
+      3
+    ]
+  },
+  "normalization_loaded": true,
+  "all_finite": true,
+  "loader_workers_for_check": 0
+}

@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-18",
+  "git_commit": "716e8e3928771e321b4a4ec16883c31817ca5d40",
+  "interpreter": "/home/yanfeng/code/EmA/EmbodiedAgentLab/.venv/bin/python",
+  "environment": {
+    "JAX_PLATFORMS": "cpu",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2"
+  },
+  "commands": [
+    "bash scripts/atombridge_python.sh -u scripts/autobio_scripts/thermal_cycler_tasks.py --episodes 100 --log-root logs/thermal_cycler_tasks",
+    "bash scripts/atombridge_python.sh -u scripts/autobio_scripts/centrifuge5910_tasks.py --episodes 100 --log-root logs/centrifuge5910_tasks"
+  ],
+  "episodes_per_task": 100,
+  "tasks_per_scene": 7,
+  "seed_rule": "index on first attempt; index + attempt * 100 for retries (attempt=2 or 3)",
+  "max_attempts_per_episode": 3,
+  "generation_code_modified": false,
+  "downloads": false,
+  "status": "complete",
+  "generator_exit_codes": {
+    "thermal": 0,
+    "centrifuge": 0
+  },
+  "audit_exit_codes": {
+    "thermal": 0,
+    "centrifuge": 0
+  },
+  "results": {
+    "thermal": {
+      "episodes": 700,
+      "states": 3491112,
+      "positive_states": 367998,
+      "bytes": 2044124137,
+      "failed_attempts": 0,
+      "retries": [],
+      "model_mjb_sha256": "97c2e5afda24edba1cf7cfca51f786b6399402115c52824391372e1ed650f342"
+    },
+    "centrifuge": {
+      "episodes": 700,
+      "states": 5641793,
+      "positive_states": 467468,
+      "bytes": 3944468592,
+      "failed_attempts": 1,
+      "retries": [
+        {
+          "task": "close_centrifuge5910_lid",
+          "episode": 15,
+          "successful_attempt": 2,
+          "seed": 215
+        }
+      ],
+      "model_mjb_sha256": "ca087e23c6d7c6d8a0a3bade9ab84d92a60e918a8c55edba59426941bf74392f"
+    }
+  },
+  "source_sha256": {
+    "scripts/autobio_scripts/thermal_cycler_tasks.py": "6d6b583abf6a11c8e762517d77e76ce87832a33cccb3fc02cf5b35d6d38fcfa6",
+    "scripts/autobio_scripts/centrifuge5910_tasks.py": "c34f747aee168047612e2a4b72bba857704c8c1baf4daf9e88066d24a0a28ecc",
+    "scripts/autobio_scripts/serialize.py": "8b82c7fa7c2b46148541fe5fb8aec8f3307f785f73faa4dc8ad23618fc685f0f"
+  }
+}

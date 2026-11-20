@@ -1,0 +1,6 @@
+{
+  "samples_compared": 137,
+  "all_tasks_and_episode_padding_checked": true,
+  "state_actions_bitwise_equal": true,
+  "first_three_batch_statistics_bitwise_equal": true
+}

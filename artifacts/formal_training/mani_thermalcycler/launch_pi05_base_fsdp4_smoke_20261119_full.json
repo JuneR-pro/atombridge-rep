@@ -1,0 +1,82 @@
+{
+  "name": "local_mani_thermalcycler_pi05",
+  "project_name": "openpi",
+  "exp_name": "pi05_base_fsdp4_smoke_20261119",
+  "model": {
+    "action_dim": 32,
+    "action_horizon": 50,
+    "max_token_len": 200,
+    "dtype": "bfloat16",
+    "paligemma_variant": "gemma_2b",
+    "action_expert_variant": "gemma_300m",
+    "pi05": true,
+    "discrete_state_input": true
+  },
+  "weight_loader": {
+    "params_path": "/home/yanfeng/code/EmA/openpi/checkpoints/pi05_base/params"
+  },
+  "pytorch_weight_path": null,
+  "pytorch_training_precision": "bfloat16",
+  "lr_schedule": {
+    "warmup_steps": 1000,
+    "peak_lr": 2.5e-05,
+    "decay_steps": 30000,
+    "decay_lr": 2.5e-06
+  },
+  "optimizer": {
+    "b1": 0.9,
+    "b2": 0.95,
+    "eps": 1e-08,
+    "weight_decay": 1e-10,
+    "clip_gradient_norm": 1.0
+  },
+  "ema_decay": 0.99,
+  "freeze_filter": "Nothing()",
+  "data": {
+    "repo_id": "mani_thermalcycler",
+    "assets": {
+      "assets_dir": "/data1/yanfeng/datasets/atombridge/assets",
+      "asset_id": "mani_thermalcycler"
+    },
+    "base_config": {
+      "repo_id": null,
+      "asset_id": null,
+      "norm_stats": null,
+      "repack_transforms": {
+        "inputs": [],
+        "outputs": []
+      },
+      "data_transforms": {
+        "inputs": [],
+        "outputs": []
+      },
+      "model_transforms": {
+        "inputs": [],
+        "outputs": []
+      },
+      "use_quantile_norm": false,
+      "action_sequence_keys": [
+        "actions"
+      ],
+      "prompt_from_task": true,
+      "rlds_data_dir": null,
+      "action_space": null,
+      "datasets": []
+    },
+    "real_action_dim": 7
+  },
+  "assets_base_dir": "/home/yanfeng/code/EmA/AtomBridge/third_party/openpi/assets",
+  "checkpoint_base_dir": "/data1/yanfeng/checkpoints/atombridge",
+  "seed": 42,
+  "batch_size": 32,
+  "num_workers": 2,
+  "num_train_steps": 3,
+  "log_interval": 1,
+  "save_interval": 10000,
+  "keep_period": 5000,
+  "overwrite": false,
+  "resume": false,
+  "wandb_enabled": false,
+  "policy_metadata": null,
+  "fsdp_devices": 4
+}

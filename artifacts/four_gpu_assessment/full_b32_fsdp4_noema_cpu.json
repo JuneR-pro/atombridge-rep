@@ -1,0 +1,30 @@
+{
+  "mode": "full",
+  "batch_size_global": 32,
+  "devices": [
+    "TFRT_CPU_0",
+    "TFRT_CPU_1",
+    "TFRT_CPU_2",
+    "TFRT_CPU_3"
+  ],
+  "backend": "cpu",
+  "fsdp_devices": 4,
+  "ema_decay": null,
+  "parameter_elements": 3353433872,
+  "trainable_elements": 3353433872,
+  "state_groups": {
+    "params": {
+      "global_bytes": 13413735488,
+      "per_device_bytes": 3358329920
+    },
+    "opt_state": {
+      "global_bytes": 26827470984,
+      "per_device_bytes": 6716659848
+    },
+    "ema_params": {
+      "global_bytes": 0,
+      "per_device_bytes": 0
+    }
+  },
+  "per_device_persistent_bytes": 10074989772
+}

@@ -1,0 +1,242 @@
+{
+  "thermal_full": {
+    "repo_config": "mani_thermalcycler_pi05",
+    "local_config": "local_mani_thermalcycler_pi05",
+    "repo_id": "mani_thermalcycler",
+    "sampling": "all frames, shuffled; no task balancing",
+    "tasks_per_policy": 7,
+    "batch_size_global": 32,
+    "num_train_steps": 50000,
+    "model": {
+      "action_dim": 32,
+      "action_horizon": 50,
+      "max_token_len": 200,
+      "dtype": "bfloat16",
+      "paligemma_variant": "gemma_2b",
+      "action_expert_variant": "gemma_300m",
+      "pi05": true,
+      "discrete_state_input": true
+    },
+    "optimizer": {
+      "b1": 0.9,
+      "b2": 0.95,
+      "eps": 1e-08,
+      "weight_decay": 1e-10,
+      "clip_gradient_norm": 1.0
+    },
+    "lr_schedule": {
+      "warmup_steps": 1000,
+      "peak_lr": 2.5e-05,
+      "decay_steps": 30000,
+      "decay_lr": 2.5e-06
+    },
+    "lr_at_steps": {
+      "0": 2.497472451068461e-08,
+      "1000": 2.499999936844688e-05,
+      "30000": 2.499999936844688e-06,
+      "49999": 2.499999936844688e-06
+    },
+    "ema_decay": 0.99,
+    "seed": 42,
+    "num_workers": 2,
+    "fsdp_devices": 4,
+    "save_interval": 10000,
+    "keep_period": 5000,
+    "log_interval": 100,
+    "wandb_enabled": false,
+    "effective_use_quantile_norm": true,
+    "prompt_from_task": true,
+    "weight_loader": {
+      "params_path": "/home/yanfeng/code/EmA/openpi/checkpoints/pi05_base/params"
+    },
+    "checkpoint_dir": "/data1/yanfeng/checkpoints/atombridge/local_mani_thermalcycler_pi05/formal_50k",
+    "norm_stats": "/data1/yanfeng/datasets/atombridge/assets/mani_thermalcycler/norm_stats.json",
+    "repo_hyperparameters_preserved": false,
+    "repo_protocol_differences": {
+      "fsdp_devices": {
+        "repo": 1,
+        "local": 4
+      }
+    }
+  },
+  "thermal_lora": {
+    "repo_config": "mani_thermalcycler_pi05-lora",
+    "local_config": "local_mani_thermalcycler_pi05_lora",
+    "repo_id": "mani_thermalcycler",
+    "sampling": "all frames, shuffled; no task balancing",
+    "tasks_per_policy": 7,
+    "batch_size_global": 32,
+    "num_train_steps": 50000,
+    "model": {
+      "action_dim": 32,
+      "action_horizon": 50,
+      "max_token_len": 200,
+      "dtype": "bfloat16",
+      "paligemma_variant": "gemma_2b_lora",
+      "action_expert_variant": "gemma_300m_lora",
+      "pi05": true,
+      "discrete_state_input": true
+    },
+    "optimizer": {
+      "b1": 0.9,
+      "b2": 0.95,
+      "eps": 1e-08,
+      "weight_decay": 1e-10,
+      "clip_gradient_norm": 1.0
+    },
+    "lr_schedule": {
+      "warmup_steps": 1000,
+      "peak_lr": 2.5e-05,
+      "decay_steps": 30000,
+      "decay_lr": 2.5e-06
+    },
+    "lr_at_steps": {
+      "0": 2.497472451068461e-08,
+      "1000": 2.499999936844688e-05,
+      "30000": 2.499999936844688e-06,
+      "49999": 2.499999936844688e-06
+    },
+    "ema_decay": null,
+    "seed": 42,
+    "num_workers": 2,
+    "fsdp_devices": 4,
+    "save_interval": 10000,
+    "keep_period": 5000,
+    "log_interval": 100,
+    "wandb_enabled": false,
+    "effective_use_quantile_norm": true,
+    "prompt_from_task": true,
+    "weight_loader": {
+      "params_path": "/home/yanfeng/code/EmA/openpi/checkpoints/pi05_base/params"
+    },
+    "checkpoint_dir": "/data1/yanfeng/checkpoints/atombridge/local_mani_thermalcycler_pi05_lora/formal_50k",
+    "norm_stats": "/data1/yanfeng/datasets/atombridge/assets/mani_thermalcycler/norm_stats.json",
+    "repo_hyperparameters_preserved": false,
+    "repo_protocol_differences": {
+      "fsdp_devices": {
+        "repo": 1,
+        "local": 4
+      }
+    }
+  },
+  "centrifuge_full": {
+    "repo_config": "mani_centrifuge5910_pi05",
+    "local_config": "local_mani_centrifuge5910_pi05",
+    "repo_id": "mani_centrifuge5910",
+    "sampling": "all frames, shuffled; no task balancing",
+    "tasks_per_policy": 7,
+    "batch_size_global": 32,
+    "num_train_steps": 50000,
+    "model": {
+      "action_dim": 32,
+      "action_horizon": 50,
+      "max_token_len": 200,
+      "dtype": "bfloat16",
+      "paligemma_variant": "gemma_2b",
+      "action_expert_variant": "gemma_300m",
+      "pi05": true,
+      "discrete_state_input": true
+    },
+    "optimizer": {
+      "b1": 0.9,
+      "b2": 0.95,
+      "eps": 1e-08,
+      "weight_decay": 1e-10,
+      "clip_gradient_norm": 1.0
+    },
+    "lr_schedule": {
+      "warmup_steps": 1000,
+      "peak_lr": 2.5e-05,
+      "decay_steps": 30000,
+      "decay_lr": 2.5e-06
+    },
+    "lr_at_steps": {
+      "0": 2.497472451068461e-08,
+      "1000": 2.499999936844688e-05,
+      "30000": 2.499999936844688e-06,
+      "49999": 2.499999936844688e-06
+    },
+    "ema_decay": 0.99,
+    "seed": 42,
+    "num_workers": 2,
+    "fsdp_devices": 4,
+    "save_interval": 10000,
+    "keep_period": 5000,
+    "log_interval": 100,
+    "wandb_enabled": false,
+    "effective_use_quantile_norm": true,
+    "prompt_from_task": true,
+    "weight_loader": {
+      "params_path": "/home/yanfeng/code/EmA/openpi/checkpoints/pi05_base/params"
+    },
+    "checkpoint_dir": "/data1/yanfeng/checkpoints/atombridge/local_mani_centrifuge5910_pi05/formal_50k",
+    "norm_stats": "/data1/yanfeng/datasets/atombridge/assets/mani_centrifuge5910/norm_stats.json",
+    "repo_hyperparameters_preserved": false,
+    "repo_protocol_differences": {
+      "fsdp_devices": {
+        "repo": 1,
+        "local": 4
+      }
+    }
+  },
+  "centrifuge_lora": {
+    "repo_config": "mani_centrifuge5910_pi05-lora",
+    "local_config": "local_mani_centrifuge5910_pi05_lora",
+    "repo_id": "mani_centrifuge5910",
+    "sampling": "all frames, shuffled; no task balancing",
+    "tasks_per_policy": 7,
+    "batch_size_global": 32,
+    "num_train_steps": 50000,
+    "model": {
+      "action_dim": 32,
+      "action_horizon": 50,
+      "max_token_len": 200,
+      "dtype": "bfloat16",
+      "paligemma_variant": "gemma_2b_lora",
+      "action_expert_variant": "gemma_300m_lora",
+      "pi05": true,
+      "discrete_state_input": true
+    },
+    "optimizer": {
+      "b1": 0.9,
+      "b2": 0.95,
+      "eps": 1e-08,
+      "weight_decay": 1e-10,
+      "clip_gradient_norm": 1.0
+    },
+    "lr_schedule": {
+      "warmup_steps": 1000,
+      "peak_lr": 2.5e-05,
+      "decay_steps": 30000,
+      "decay_lr": 2.5e-06
+    },
+    "lr_at_steps": {
+      "0": 2.497472451068461e-08,
+      "1000": 2.499999936844688e-05,
+      "30000": 2.499999936844688e-06,
+      "49999": 2.499999936844688e-06
+    },
+    "ema_decay": null,
+    "seed": 42,
+    "num_workers": 2,
+    "fsdp_devices": 4,
+    "save_interval": 10000,
+    "keep_period": 5000,
+    "log_interval": 100,
+    "wandb_enabled": false,
+    "effective_use_quantile_norm": true,
+    "prompt_from_task": true,
+    "weight_loader": {
+      "params_path": "/home/yanfeng/code/EmA/openpi/checkpoints/pi05_base/params"
+    },
+    "checkpoint_dir": "/data1/yanfeng/checkpoints/atombridge/local_mani_centrifuge5910_pi05_lora/formal_50k",
+    "norm_stats": "/data1/yanfeng/datasets/atombridge/assets/mani_centrifuge5910/norm_stats.json",
+    "repo_hyperparameters_preserved": false,
+    "repo_protocol_differences": {
+      "fsdp_devices": {
+        "repo": 1,
+        "local": 4
+      }
+    }
+  }
+}

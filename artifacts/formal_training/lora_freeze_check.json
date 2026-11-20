@@ -1,0 +1,6 @@
+{
+  "PaliGemma/llm/layers/attn/q_einsum/w": true,
+  "PaliGemma/llm/layers/attn/q_einsum/lora_a": false,
+  "PaliGemma/img/embedding/kernel": false,
+  "action_out_proj/kernel": false
+}
